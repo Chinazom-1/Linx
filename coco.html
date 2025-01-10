@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coco Page</title>
+
+        <script>
+            function themechange(){
+                document.getElementById('undiv').style.backgroundColor = 'black';
+                document.getElementById('rue').style.color = '#fff';
+                document.getElementById('btn');
+                window.print();
+            }
+
+            function themereverse(){
+                document.getElementById('undiv').style.backgroundColor = '#fff';
+                document.getElementById('rue').style.color = 'black';
+            }
+
+            
+        </script>
+    </head>
+    <body id="undiv" style="font-family: sans-serif, poppins;">
+        <header>
+
+        </header>
+
+        <main>
+            <div id="Enid" class="division">
+                <p id="rue" class="nate">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dignissimos nihil rerum voluptates nam neque amet necessitatibus quaerat asperiores iste perferendis, explicabo repudiandae excepturi harum minus eaque ipsam nobis perspiciatis? Commodi, neque et perferendis ratione animi laudantium excepturi ex. Eveniet neque maiores tenetur iusto! Quis molestias ducimus qui eveniet quidem.
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            <button id="btn" onclick="themechange(alert('whats up'))" ondblclick="themereverse()">Change theme color</button>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" id="olee">
+    <!-- Do not attempt stealing and/or pirating thiis piece of work --> 
+     <!-- No part of this work show be recreated, stored either electronically or manually in a retrieval system, etc without a written permission from its author. -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/wifi-protection-for-gadget-disposal-featured.jpg">
+        <title>My Page</title>
+
+       <style>
+            #popup {
+              display: none;
+              position: fixed;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              padding: 2rem;
+              background-image: url(images/Capture.PNG);
+              box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+              z-index: 1000;
+              border-radius: 10px;
+              transition: 0.5s;
+              border: solid rgb(155, 155, 155) 2px;
+              animation: forwards 5s;
+            }
+            #popup:hover {
+              display: none;
+              position: fixed;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              padding: 2rem;
+              background-image: url(images/Capture.PNG);
+              box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+              z-index: 1000;
+              border-radius: 10px;
+              transition: 0.5s;
+              border: solid white 2px;
+            }
+            #popup h2{
+                margin: auto auto 5px auto;
+                text-align: center;
+            }
+            ol{
+                margin: 5px;
+                padding: 5px;
+                color: #cfcece;
+            }
+            #overlay {
+              display: none;
+              position: fixed;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0,0,0,0.5);
+              z-index: 999;
+            }
+        </style>
+    </head>
+    <body>
+       <header>
+            <nav>
+                <div class="hi">Zomzom</div>
+                <div class="others">
+                    <a href="index.html" onclick="alert('Go Home')">Home</a>
+                    <a href="#" onclick="alert('How about yourself, you stink!'), showPopup()">About</a>
+                    <a href="#" onclick="alert('Go Service yourself')">Services</a>
+                    <a href="#Contacts" id="hide_col" style="display: none;" onclick="document.getElementById('Contacts').style.display='none', document.getElementById('Col').style.display='block', document.getElementById('hide_col').style.display='none'">Hide Col...</a>
+                    <a href="#Contacts" id="Col" onclick="document.getElementById('hide_col').style.display='block', document.getElementById('Col').style.display='none', document.getElementById('Contacts').style.display='block'">Colleagues</a>
+                    <a href="mailto:chinazom.ugwuanyi@outlook.com" onclick="alert('Your Email would be opened shortly')">Email</a>
+                </div>
+            </nav>
+            <span id="memo" style="display: none;" onclick="document.getElementById('demo').style.display ='none', document.getElementById('demo').innerHTML= Date()">
+                <div  style="font-size: larger; position: fixed; transform: translate(50%, -50%); color: aliceblue; background-color: #ff4949; padding: 1rem; border: solid black 1px; border-radius: 7px; cursor: pointer; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                    Close
+                </div>
+            </span>
+            <span title="Click to Update Date & Time" class="demo_container">
+                <button id="demo" onclick="document.getElementById('demo').innerHTML = Date(), document.getElementById('memo').style.display='block'" style="font-size: larger; position: fixed; transform: translate(50%, -50%); color: aliceblue; background-color: #1f1f1f; padding: 1rem; border: solid black 1px; border-radius: 7px; cursor: pointer; box-shadow: 0 5px 12px rgba(0,0,0,0.3); ">
+                    Date
+                </button>
+            </span>
+        </header>
+
+       <main>
+            <div class="containor1">
+                <div class="left1">
+                    <p class="bio"><b>Bio</b></p>
+                    <p class="full-bio">My name is Chinazom. <br>
+                        I live at No. 36 Danfodio Street UNN Nsukka, Nigeria <br>
+                        I am 14 years old, <span onclick="shownn()">and</span> I'm an <span onclick="more()">aspiring</span> web developer <br>
+                        working <br>
+                        mainly with <abbr title="HyperText Markup Language">HTML</abbr> <abbr title="Cascading stylesheet">CSS</abbr>
+                        and JavaScript. I school at <abbr title="University of Nigeria Secondary School Nsukka">UNISEC</abbr><br>
+                        I have a family of Eight, while I'm the first child. <br>
+                    </p>
+                    <button onclick="showPopup()" class="button">Hire Me!</button>
+                </div>    
+                <div class="right1">
+                    <img class="me btn-warning" src="images/me.jpg" alt="Reload Page To View Image. If problem persists, restart your machine.">
+                </div>        
+            </div>
+        <div id="Contacts">
+            <p class="meet"><b>Meet My Crew!</b></p>
+            <div class="containor2">
+                <div class="left2">
+                    <img src="images/Achi.jpg" alt="">
+                    <p><b>Hi, I'm Amarachi <br>
+                        I live at Enugu State, Nigeria <br>
+                        I am a brother to Chinazom </b>
+                    </p>
+                    <button onclick="alert('Error (101)')" class="button">Hire</button>
+                </div>
+                <div class="middle2">
+                    <img src="images/dindu.jpg" alt="">
+                    <p><b>Hi, I'm Amarachi <br>
+                        I live at Enugu State, Nigeria <br>
+                        I am a brother to Chinazom </b>
+                    </p>
+                    <button class="button">Hire</button>
+                </div>
+                <div class="right2">
+                    <img src="images/trio.jpg" alt="hi">
+                    <p><b>Hi, I'm Amarachi <br>
+                        I live at Enugu State, Nigeria <br>
+                        I am a brother to Chinazom </b>
+                    </p>
+                    <button class="button">Hire</button>
+                </div>
+            </div>
+        </div>
+        <div id="overlay" onclick="closePopup()"></div>
+            <div id="popup">
+                <h2><b><u>Chinazom's Hire Info</u></b></h2>
+                <p>If you want to hire Chinazom(me), <br>
+                    <span> contact him through on of the following:</span> 
+                    <ol>
+                        <li><b>Gmail</b>: <span>chinazom.ugwuanyi@gmail.com</span></li>
+                        <li><b>Outlook</b>: <span>chinazom.ugwuanyi@outlook.com</span></li>
+                        <li><b>Github</b>: <span>Chinazom-1</span></li>
+                        <li><b>Guilded</b>: <span>@butterbutterfanzone</span></li>
+                        <li><b>Discord</b>: <span>maxizom.fcb</span></li>
+                        <li><b>Roblox</b>: <span>@butterbutterfanzone</span></li>
+                        <li><b>Phone</b>: <span>+234(0)8130137872</span></li>
+                    </ol>
+                </p>
+                <button onclick="closePopup()" class="popup_btn">Close</button>
+            </div>
+            <div id="extra">
+                <h2>
+                    <b>
+                        <u>
+                            Terms of Service and Use
+                        </u>
+                    </b>
+                </h2>
+                <p>
+                    <ul>
+                        <li>We would store data on your device to enable us identify you in future</li>
+                        <li>Lorem isum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur</li>
+                    </ul>
+                </p>
+                <div class="btn-s">
+                    <button class="popup22_btn" onclick="ace()">Accept</button>
+                    <button class="popup22_btn" onclick="ace()">Reject</button>
+                </div>
+            </div>
+       </main>
+
+       <footer>
+            <span id="hide" ></span>
+            <div id="cookies">
+                <span class="cook_up"><b><h3>We use Cookies!</h3></b></span>
+                <span class="cook_down">
+                    <div class="cook_right">
+                        <span id="imp"><h4>Your privacy is important to us</h4></span>
+                        <p id="bs_talk" class="vitle"><b>It is really vital that we store information, called "cookies" on your device to enable us control over web traffic on our sites. This would help us identify your device(s) in future</b></p>
+                    </div>
+                    <div class="cook_left">
+                        <span id="imp"><h4>We need your approval</h4></span>
+                        <p id="bs_talk" class="vitl"><b>So therefore, your permission is required to enable us carry certain task(s)</b></p>
+                        <div class="btn_s">
+                 
+                            <button class="popup2_btn" onclick="accepted()">Accept</button>
+                            <button class="popup21_btn" onclick="more()">View usage</button>
+                            <button class="popup2_btn" onclick="accepted()">Reject</button>
+                        </div>
+                    </div>
+                </span>
+            </div>
+       </footer>
+       <script src="sub.js"></script>
+    </body>
+</html>
+

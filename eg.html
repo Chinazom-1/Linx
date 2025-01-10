@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popup Example</title>
+  <style>
+    #popup {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    #overlay {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0,0,0,0.5);
+      z-index: 999;
+    }
+  </style>
+  <script>
+    
+    const pop = document.getElementById('popup');
+    const trigger = document.getElementById('login-trigger');
+
+    function showPopup() {
+      pop.style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+    }
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+</head>
+<body>
+  <button onclick="showPopup()">Click Me!</button>
+
+  <div id="overlay" onclick="closePopup()"></div>
+
+  <div id="popup">
+    <h2>Popup Message</h2>
+    <p>Hello, this is your centered pop-up message!</p>
+    <button onclick="closePopup()" aria-readonly="true">Close</button>
+  </div>
+</body>
+</html>
